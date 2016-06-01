@@ -26,4 +26,3 @@ public class RegEx {
     public static String charValue =  "^'[^';]*'$";
     public static String stringValue = "^\"[^\";]*\"$";
 }
-  
