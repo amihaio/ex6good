@@ -35,8 +35,4 @@ public class MethodObject extends ScopeAbstract {
         return parameterList;
     }
 
-    @Override
-    public boolean validate() {
-
-    }
 }

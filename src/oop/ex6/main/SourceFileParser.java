@@ -97,7 +97,7 @@ public class SourceFileParser {
      * @param lineList - list of lines.
      * @return a list of line that related to the inner scope, if the inner scope is invalid - return null.
      */
-    public List<String> getInnerScope(List<String> lineList){
+    public List<String> getInnerScope(List<String> lineList) throws ParsingException{
         Pattern methodSignature = Pattern.compile(RegEx.methodDecleration);
         Pattern ifWhileDeceleration = Pattern.compile(RegEx.ifWhileDecleration);
         Pattern closeScope = Pattern.compile(RegEx.closeScope);
@@ -109,7 +109,7 @@ public class SourceFileParser {
 
         while (currentLine != null && !isMethodSignature.matches()) {
             if (getLineType(currentLine) == null)
-                return null;
+                throw new ParsingException("")
 
             if (ifWhileDeceleration.matcher(currentLine).matches())
                 scopeCounter++;

@@ -30,7 +30,8 @@ public class  RegEx {
     // "if/while" regex //
     //////////////////////
 
-    public final static String ifDecleration = "(while|if)\\s*\\(\\s*([a-zA-z][\\w]*|true|false|(-?[1-9]+" +
+    public final static String ifWhileDecleration = "(while|if)\\s*\\(\\s*([a-zA-z][\\w]*|true|false|" +
+            "(-?[1-9]+" +
             ".?[1-9]*))(| (\\s (&&|\\|\\|) \\s+([a-zA-z][\\w]*|true|false|(-?[1-9]+.?[1-9]*)))*)\\s*\\)" +
             "\\s*\\{";
 
